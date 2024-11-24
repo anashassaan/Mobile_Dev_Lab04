@@ -51,11 +51,11 @@ class _PostScreenState extends State<PostScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Random Post'),
+        title: Text('Random Post'),
       ),
       body: Center(
         child: _isLoading
-            ? const CircularProgressIndicator()
+            ? CircularProgressIndicator()
             : _post != null
                 ? Padding(
                     padding: const EdgeInsets.all(16.0),
@@ -64,18 +64,18 @@ class _PostScreenState extends State<PostScreen> {
                       children: <Widget>[
                         Text(
                           'Title: ${_post!['title']}',
-                          style: const TextStyle(
+                          style: TextStyle(
                               fontSize: 24, fontWeight: FontWeight.bold),
                         ),
-                        const SizedBox(height: 10),
+                        SizedBox(height: 10),
                         Text(
                           'Body: ${_post!['body']}',
-                          style: const TextStyle(fontSize: 18),
+                          style: TextStyle(fontSize: 18),
                         ),
                       ],
                     ),
                   )
-                : const Text('No post loaded'),
+                : Text('No post loaded'),
       ),
     );
   }
